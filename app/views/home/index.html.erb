@@ -1,18 +1,32 @@
-<h1>Κάτι παραπάνω απο Rock..</h1>
 
-</br>
+
 <% @articles.each do |article| %>
   <div class="title">
-    <%= article.title %>
+	
+	<%= image_tag("logo.png", :alt => "trohka logo",:width => 30, :height => 40) %>
+    <%= link_to article.title, article %>
+
+
 </div>
-<p class="text-left">
-	<%= image_tag article.photo.url(:medium), :class => "articleimg" %>		
-    <%= article.body %>
-    <%= article.category_id %>
-<div style="clear:both"></div>
+</br>
+<div class="row">
+<div class="span3">
+	<%= image_tag article.photo.url(:medium), :class => "articleimg" %>
+	</div>
+	
+	<div class="span5">
+    <%= raw(article.prebody) %>
     <%= link_to 'Show', article %>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+</div>
+</br>
+</br>
+
+
 <% end %>
 <%= link_to 'New Article', new_article_path %>
-</p>
+
+</br>
+<%= will_paginate @articles, :page_links => false %> 

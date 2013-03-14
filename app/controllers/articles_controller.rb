@@ -2,9 +2,10 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
-    #@articles = Article.paginate(:page => params[:page])
-    #@articles = Article.paginate(:page => params[:page])
+    @articles = Article.order(:title).page(params[:page]).per(5)
+    #@producers = Producer.order(:name).page(params[:page])
+    #@products = Product.order("id").where("id IN (?)", params[:id])
+    #@users = User.order(:name).page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }

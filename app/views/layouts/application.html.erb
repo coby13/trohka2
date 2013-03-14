@@ -12,7 +12,7 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
-
+    <%= javascript_include_tag "private_pub" %>
     <link href="images/favicon.ico" rel="shortcut icon">
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
@@ -23,15 +23,22 @@
 	        <div class="row">
 	<div class="span8">
 	<div class="logo">
-	<%= image_tag("logo.png", :alt => "rss feed",:width => 220, :height => 120) %>
+	<%= image_tag("logo.png", :alt => "rss feed",:width => 220, :height => 150) %>
     </div>
     </div>
-    
+
     <div class="span4">
 	<div class="player">
-	<script type="text/javascript" src="http://player.wavestreamer.com/cgi-bin/swf.js?id=0YYZCIY6RM4LIO2J"></script>
-	<script type="text/javascript" src=" http://player.wavestreaming.com/?id=0YYZCIY6RM4LIO2J"></script>
+		<script type="text/javascript" src="http://player.wavestreamer.com/cgi-bin/swf.js?id=O2K4XRMREW8EDZUT"></script>
+		<script type="text/javascript" src=" http://player.wavestreaming.com/?id=O2K4XRMREW8EDZUT"></script>
     </div>
+	<div id="cc_tunein">
+		ή	<a href="http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.pls"><img align="absmiddle" src="http://cent9.directhostingcenter.com/system/images/tunein-pls.png" border="0" alt="Winamp" title="Winamp" /></a>
+		<a href="http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.asx"><img align="absmiddle" src="http://cent9.directhostingcenter.com/system/images/tunein-asx.png" border="0" alt="windows Media Player" title="Windows Media Player" /></a>
+		<a href="http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram"><img align="absmiddle" src="http://cent9.directhostingcenter.com/system/images/tunein-ram.png" border="0" alt="Real Player" title="Real Player" /></a>
+		<a href="http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.qtl"><img align="absmiddle" src="http://cent9.directhostingcenter.com/system/images/tunein-qtl.png" border="0" alt="QuickTime" title="QuickTime" /></a>
+	</div>
+
     <div class="streaminfo">
 	Ακούμε: <a href="http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/tunein.pls" id="cc_stream_info_song">Loading...</a><br />
 	</div><!--/streaminfo-->
@@ -51,14 +58,17 @@
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Πρόγραμμα", page_path("program")  %></li>
-              <li><%= link_to "Events", "/path2"  %></li>
-              <li><%= link_to "Δημοσκόπηση", "/path3"  %></li>
+              <li><%= link_to "Σαν σήμερα", "/path2"  %></li>
               <li><%= link_to "Groups", "/path3"  %></li>
-              <li><%= link_to "Επικοινωνία", "/path3"  %></li>
-			<ul class="pull-right">
+              <li><%= link_to "Δημοσκόπηση", "/path3"  %></li>
 
-			                   <%= render 'devise/menu/registration_items' %>
-			                   <%= render 'devise/menu/login_items' %>
+			<ul class="pull-right">
+				<%if current_user%>
+				<%= render 'devise/menu/login_items' %>
+				<%else%>
+				<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+				<%end%>
+				
 
 			           </ul>
             </ul>
@@ -71,38 +81,54 @@
       <div class="content">
         <div class="row">
            <div class="span6">
-			<div id="myCarousel" class="carousel slide">
-			  <!-- Carousel items -->
+			<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
 			  <div class="carousel-inner">
-			    <div class="active item"><%= image_tag 'be.jpg' %><alt="HTML5 logo" width="100" height="99" /></div>
-			     <div class="carousel-caption">
-				        <p>THE BLACK KEYS
-						The Black Keys is an American rock duo formed in Akron, Ohio in 2001. The group consists of Dan               Auerbach (guitar, vocals) and Patrick Carney (drums)...</p>
-				      </div>
-			    <div class="item"><%= image_tag 'ra.jpg' %> <alt="HTML5 logo" width="670" height="99" /></div>
-			    <div class="item"><%= image_tag 'pf.jpg' %><alt="HTML5 logo" width="500" height="99" /></div>
-			  </div>
-			  <!-- Carousel nav -->
-			  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			</div>
+			    <div class="item active"><!-- class of active since it's the first item -->
+			<%= image_tag 'be.jpg' %>
+			      <div class="carousel-caption">
+			        <p>The Black Keys </p>
+			      </div>
+			    </div>
+			    <div class="item">
+			<%= image_tag 'pink.jpg' %>
+			      <div class="carousel-caption">
+			        <p>Pink Floyd</p>
+			      </div>
+			    </div>
+			    <div class="item">
+			<%= image_tag 'ra.jpg' %>
+			      <div class="carousel-caption">
+			        <p>Rage against the Machine</p>
+			      </div>
+			    </div>
+
+			  </div><!-- /.carousel-inner -->
+			  <!--  Next and Previous controls below
+			        href values must reference the id for this carousel -->
+			    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+			    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+			</div><!-- /.carousel -->
 			    </div><!--/span-->
+			   <div class="span6">
+
+		      </div>
 	        </div><!--/row-->
+	
+		
 			<div class="row">
 	           <div class="span9">
               <%= yield %>
             </div>
             <div class="span3">
-              <div class="well sidebar-nav">
-                <h3>Sidebar</h3>
-                <ul class="nav nav-list">
-                  <li class="nav-header">Sidebar</li>
-                  <li><%= link_to "Link1", "/path1"  %></li>
-                  <li><%= link_to "Link2", "/path2"  %></li>
-                  <li><%= link_to "Link3", "/path3"  %></li>
-                </ul>
-              </div><!--/.well -->
-                  <%= image_tag("trohka.jpg", :alt => "rss feed",:width => 270, :height => 300) %>
+			<div class ='recenttracktitle'>
+              	Ακούσαμε:
+				</div>
+			
+				<div class= "recenttracks">
+					
+					<div id="cc_recent_tracks">Loading...</div>
+				</div>
+				<%= image_tag("trohka2.jpg", :alt => "rss feed",:width => 270, :height => 300) %>
                   <%= image_tag("nefeli_1.jpg", :alt => "rss feed",:width => 270, :height => 300) %>
                   <%= image_tag("blow.png", :alt => "rss feed",:width => 270, :height => 300) %>
 
@@ -111,7 +137,7 @@
       </div><!--/content-->
 
       <footer>
-        <p>&copy; Trohka Web Radio 2012</p>
+        <p>&copy; Trohka Web Radio 2013</p>
       </footer>
 
     </div> <!-- /container -->
@@ -122,5 +148,7 @@
     <%= javascript_include_tag "application" %>
 	<script language="javascript" type="text/javascript" src="http://cent9.directhostingcenter.com/system/streaminfo.js"></script>
 	<script language="javascript" type="text/javascript" src="http://cent9.directhostingcenter.com/js.php/thkwfnkp/streaminfo/rnd0"></script>
+	<script language="javascript" type="text/javascript" src="http://cent9.directhostingcenter.com/system/recenttracks.js"></script>
+	<script language="javascript" type="text/javascript" src="http://cent9.directhostingcenter.com/js.php/thkwfnkp/recenttracks/rnd0"></script>
   </body>
 </html>

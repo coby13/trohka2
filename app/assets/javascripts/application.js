@@ -13,7 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree .
 //= require jquery-ui
+//= require private_pub
 //= require bootstrap
 //= require streaminfo.js
+//= require ckeditor/init
+//= require jquery-ui
+//= require streaminfo.js
+//= require_tree .
+

@@ -43,10 +43,58 @@ body {
 }
 .streaminfo{
 	padding-bottom: 10px;
-	color: #f0f0f3;
+	color: #a90329;
 	
 }
 .streaminfo a {
 	color: #f0f0f3;
 	
+}
+
+.cctrack {
+	padding-bottom: 10px;
+}
+.cctrack .cccover {
+	padding: 2px;
+	background-color: white;
+	border: 1px solid #C6C6C6;
+	width: 10px;
+	height: 43px;
+	float: left;
+	margin-right: 8px;
+	visibility: hidden;
+}
+.cctrack .cctitle {
+	color: #0f0f0f;
+	font-weight: bold;
+	padding-left: 40px;
+	
+}
+.cctrack .ccnowplaying {
+	font-weight: bold;
+}
+.cctrack .ccartist {
+	color: #A8A8A8;
+	margin-bottom: 6px;
+	padding-left: 40px;
+	
+}
+
+.cctrack a.ccbuy,
+.cctrack a.ccbuy:link,
+.cctrack a.ccbuy:active,
+.cctrack a.ccbuy:visited,
+.cctrack a.ccbuy:hover {
+	color: #919191;
+	font-size: 0.9em;
+	text-decoration: none;
+	font-weight: normal;
+}
+.cctrack a.ccbuy:hover {
+	text-decoration: underline;
+}
+
+.recenttracks{
+	
+	padding-top: 20px;
 }

@@ -4,15 +4,26 @@
 <% @articles.each do |article| %>
   <div class="title">
     <%= article.title %>
-</div>
 
+</div>
+</br>
+<div class="row">
+<div class="span3">
 	<%= image_tag article.photo.url(:medium), :class => "articleimg" %>
-	<p class="text-left">
-    <%= article.body %>
+	</div>
+	</br>
+	<div class="span5">
+    <%= article.prebody %>
     <%= article.category_id %>
     <%= link_to 'Show', article %>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+</div>
+</br>
+</br>
 <% end %>
 <%= link_to 'New Article', new_article_path %>
-</p>
+
+</br>
+

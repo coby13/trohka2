@@ -14,10 +14,12 @@ gem "paperclip", "~> 3.0"
 gem "high_voltage"
 gem 'rmagick'
 gem 'private_pub'
-gem 'faye'
-# gem 'thin'
-gem 'bootstrap-will_paginate'
-
+gem 'thin'
+gem 'will_paginate', '~> 3.0'
+gem 'google-webfonts'
+gem "ckeditor"
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Gems used only for assets and not required
 # in production environments by default.

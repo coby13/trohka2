@@ -1,21 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <div class ="titleshow">
   <%= @article.title %>
+</div>
 </p>
-
 <p>
-  <b>Body:</b>
-  <%= @article.body %>
+<%= image_tag @article.photo.url(:medium) %>
+  <%= raw(@article.body) %>
 </p>
 
-<p>
-  <b>Category:</b>
-  <%= @article.category_id %>
-</p>
 
-<%= image_tag @article.photo.url %>
+
 
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
