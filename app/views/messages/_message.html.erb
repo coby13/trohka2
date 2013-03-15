@@ -1,6 +1,12 @@
-<li>
-  <span class="created_at"></span>
+<li class="media">
+	  <a class="pull-left" href="#">
+    	<%= message.created_at.strftime("%H:%M") %>
+    </a>
   <%= message.user.name if message.user %>
   <%= message.content %>
-<%= message.created_at.strftime("%H:%M") %>
 </li>
+
+
+
+
+

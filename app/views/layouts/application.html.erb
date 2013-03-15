@@ -111,8 +111,7 @@
 			    </div><!--/span-->
 			   <div class="span6">
 				<%if current_user%>
-				<h1>Chat</h1>
-
+				<div class= "chat">
 				<ul id="chat">
 				  <%= render @messages %>
 				</ul>
@@ -124,6 +123,7 @@
 				<% end %>
 
 				<%= subscribe_to "/messages/new" %>
+				</div>
 				
 				<%end%>
 		      </div>
