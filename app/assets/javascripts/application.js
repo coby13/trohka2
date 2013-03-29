@@ -28,3 +28,8 @@ setInterval(function(){
 var chatDiv = document.getElementsByClassName('chat')[0]; //I assume you only have one chat box!
 chatDiv.scrollTop = chatDiv.scrollHeight;
     },5000);
+
+setInterval(function(){
+var recenttracksjs = recenttracksjs;
+
+    },5000);
