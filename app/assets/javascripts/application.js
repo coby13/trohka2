@@ -22,5 +22,9 @@
 //= require streaminfo.js
 //= require_tree .
 
+setInterval(function(){
+      // method to be executed;
+
 var chatDiv = document.getElementsByClassName('chat')[0]; //I assume you only have one chat box!
 chatDiv.scrollTop = chatDiv.scrollHeight;
+    },5000);
