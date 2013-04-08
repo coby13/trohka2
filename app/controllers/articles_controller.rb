@@ -12,6 +12,17 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def program
+    @program = Article.find(1)
+    #@producers = Producer.order(:name).page(params[:page])
+    #@products = Product.order("id").where("id IN (?)", params[:id])
+    #@users = User.order(:name).page params[:page]
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @articles }
+    end
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
