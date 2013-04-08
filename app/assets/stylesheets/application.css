@@ -13,7 +13,8 @@
  */
 body {
      margin: 0;
-     background-image: asset_url("bg.jpg", image);
+     
+     background-color: #000;
      background-size: 1440px 800px;
      background-repeat:no-repeat;
      display: compact;
@@ -23,7 +24,6 @@ body {
 .content .span9 {
 	padding-left: 0px;
 	display: compact;
-	background-image: asset_url("whitebg.jpg", image);
 	background-color: #000;
   
 }
@@ -39,6 +39,7 @@ body {
 .player{
 	padding-bottom: 10px;
 	padding-top: 25px;
+	padding-right: 10px;
 	
 }
 .streaminfo{
