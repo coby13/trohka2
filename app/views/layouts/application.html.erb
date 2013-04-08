@@ -23,22 +23,24 @@
 	        <div class="row">
 	<div class="span8">
 	<div class="logo">
-	<%= image_tag("logo.png", :alt => "rss feed",:width => 220, :height => 150) %>
+	<%= image_tag("logo.png", :alt => "rss feed",:width => 220, :height => 135) %>
     </div>
+    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTROHKA-RADIO%2F284657414884918&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;font=tahoma&amp;colorscheme=dark&amp;action=like&amp;height=35&amp;appId=518104824906349" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:35px;" allowTransparency="true"></iframe>
     </div>
 
     <div class="span4">
 	<div class="player">
-		<script type="text/javascript" src="http://player.wavestreamer.com/cgi-bin/swf.js?id=00WM8FQK7I5BIT3O"></script>
-<script type="text/javascript" src=" http://player.wavestreaming.com/?id=00WM8FQK7I5BIT3O"></script>
+		<script type="text/javascript" src="http://player.wavestreamer.com/cgi-bin/swf.js?id=LYHZ6DXN54DASU9B"></script>
+<script type="text/javascript" src=" http://player.wavestreaming.com/?id=LYHZ6DXN54DASU9B"></script>
+ 
     </div>
 	<div id="cc_tunein">
 		ή
-		<%= link_to image_tag("winamp.png", :border => 0,:width => 50, :height => 50), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.pls" %>	
-		<%= link_to image_tag("wmp.png", :border => 0,:width => 50, :height => 50), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.asx" %>	
-		<%= link_to image_tag("real.png", :border => 0,:width => 50, :height => 50), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram" %>	
-		<%= link_to image_tag("quick.png", :border => 0,:width => 50, :height => 50), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram" %>	
-		
+		<%= link_to image_tag("winamp.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.pls" %>	
+		<%= link_to image_tag("wmp.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.asx" %>	
+		<%= link_to image_tag("real.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram" %>	
+		<%= link_to image_tag("quick.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram" %>	
+		<%= link_to image_tag("tunein.png", :border => 0,:width => 35, :height => 35), "http://tunein.com/radio/Trohka-Web-Radio-s190410/?popout=true" %>
 	</div>
 
     <div class="streaminfo">
@@ -67,13 +69,16 @@
 			<ul class="pull-right">
 				<%if current_user%>
 				<%= render 'devise/menu/login_items' %>
+
 				<%else%>
+				</ul>
+			<ul class="pull-right1">
 				<%= link_to image_tag("facebook.png", :border => 0), user_omniauth_authorize_path(:facebook) %>
-				
+				</ul>
 				<%end%>
 				
 
-			           </ul>
+			           
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -131,7 +136,7 @@
 				</div>
 				<%else%>
 				
-				<%= image_tag("chat.png", :alt => "rss feed",:width => 550, :height => 100) %>
+				<%= image_tag("chat.png", :alt => "rss feed",:width => 535, :height => 100) %>
 				<%end%>
 		      </div>
 	        </div><!--/row-->
