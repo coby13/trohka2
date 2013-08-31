@@ -38,10 +38,10 @@
 		
 		<div class="or">
 			ή
-		<%= link_to image_tag("winamp.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.pls" %>	
-		<%= link_to image_tag("wmp.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.asx" %>	
-		<%= link_to image_tag("real.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram" %>	
-		<%= link_to image_tag("quick.png", :border => 0,:width => 35, :height => 35), "http://cent9.directhostingcenter.com/tunein.php/thkwfnkp/playlist.ram" %>	
+		<%= link_to image_tag("winamp.png", :border => 0,:width => 35, :height => 35), "http://panel2.directhostingcenter.com/tunein.php/ehkgpoqg/playlist.pls" %>	
+		<%= link_to image_tag("wmp.png", :border => 0,:width => 35, :height => 35), "http://panel2.directhostingcenter.com/tunein.php/ehkgpoqg/playlist.asx" %>	
+		<%= link_to image_tag("real.png", :border => 0,:width => 35, :height => 35), "http://panel2.directhostingcenter.com/tunein.php/ehkgpoqg/playlist.ram" %>	
+		<%= link_to image_tag("quick.png", :border => 0,:width => 35, :height => 35), "http://panel2.directhostingcenter.com/tunein.php/ehkgpoqg/playlist.qtl" %>	
 		<%= link_to image_tag("tunein.png", :border => 0,:width => 35, :height => 35), "http://tunein.com/radio/Trohka-Web-Radio-s190410/?popout=true" %>
 	</div>
 	</div>
@@ -65,9 +65,9 @@
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Πρόγραμμα", page_path("program")  %></li>
-              <li><%= link_to "Σαν σήμερα", "/path2"  %></li>
               <li><%= link_to "Groups", "/path3"  %></li>
               <li><%= link_to "Δημοσκόπηση", "/path3"  %></li>
+              <li><%= link_to "Επικοινωνία", "/path2"  %></li>
 
 			<ul class="pull-right">
 				<%if current_user%>
@@ -120,6 +120,7 @@
 			    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
 			</div><!-- /.carousel -->
 			    </div><!--/span-->
+
 			   <div class="span6">
 				<%if current_user%>
 				<div class= "chat">
@@ -158,9 +159,9 @@
 					
 					<div id="cc_recent_tracks">Loading...</div>
 				</div>
-				<%= image_tag("trohka2.jpg", :alt => "rss feed",:width => 270, :height => 300) %>
+			<!--	<%= image_tag("trohka2.jpg", :alt => "rss feed",:width => 270, :height => 300) %>
                   <%= image_tag("nefeli_1.jpg", :alt => "rss feed",:width => 270, :height => 300) %>
-                  <%= image_tag("blow.png", :alt => "rss feed",:width => 270, :height => 300) %>
+                  <%= image_tag("blow.png", :alt => "rss feed",:width => 270, :height => 300) %>  -->
 
             </div><!--/span-->
         </div><!--/row-->
