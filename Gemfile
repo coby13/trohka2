@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 group :production, :staging do
   gem "pg"
+  gem "mysql2"
 end
 
 group :development, :test do

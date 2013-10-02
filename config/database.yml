@@ -23,7 +23,7 @@ production:
   encoding: utf8
   reconnect: false
   host: localhost
-  database: trohka
+  database: trohka1
   pool: 5
   username: root
   password: "268082268082"
