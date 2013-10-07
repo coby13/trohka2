@@ -28,6 +28,7 @@ gem 'google-webfonts'
 gem "ckeditor"
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -28,7 +28,8 @@
 
 
 <% end %>
-<%if current_user%>
+
+<%if current_user && current_user.email == "eliastsirwnhs@gmail.com"%>
 <%= link_to 'New Article', new_article_path %>
 <% end %>
 </br>

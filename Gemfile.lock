@@ -236,6 +236,7 @@ DEPENDENCIES
   google-webfonts
   high_voltage
   jquery-rails
+  kaminari
   mysql2
   omniauth
   omniauth-facebook
