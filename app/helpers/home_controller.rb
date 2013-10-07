@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.order(:title).paginate(:page => params[:page])
+    @articles = Article.order(:title)
     @messages = Message.all
     respond_to do |format|
       format.html # index.html.erb

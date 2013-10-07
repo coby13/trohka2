@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.order(:title).page(params[:page]).per(5)
+    @articles = Article.order(:title)
     #@producers = Producer.order(:name).page(params[:page])
     #@products = Product.order("id").where("id IN (?)", params[:id])
     #@users = User.order(:name).page params[:page]

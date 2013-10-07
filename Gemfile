@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'activeadmin'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,7 +24,6 @@ gem "high_voltage"
 gem 'rmagick'
 gem 'private_pub'
 gem 'thin'
-gem 'will_paginate', '~> 3.0'
 gem 'google-webfonts'
 gem "ckeditor"
 gem 'omniauth'
