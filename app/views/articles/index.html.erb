@@ -16,15 +16,21 @@
 	<div class="span5">
     <%= article.prebody %>
     <%= article.category_id %>
+    <%if current_user && current_user.admin%>
+
     <%= link_to 'Show', article %>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%end%>
 </div>
 </div>
 </br>
 </br>
 <% end %>
+<%if current_user && current_user.admin%>
+
 <%= link_to 'New Article', new_article_path %>
+<%end%>
 
 </br>
 

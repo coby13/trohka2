@@ -23,7 +23,7 @@
 	        <div class="row">
 	<div class="span8">
 	<div class="logo">
-	<%= image_tag("logo.png", :alt => "rss feed",:width => 220, :height => 135) %>
+	<%= link_to image_tag("logo.png", :alt => "rss feed",:width => 220, :height => 135), "/" %>
     </div>
     <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTROHKA-RADIO%2F284657414884918&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;font=tahoma&amp;colorscheme=dark&amp;action=like&amp;height=35&amp;appId=518104824906349" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:35px;" allowTransparency="true"></iframe>
     </div>
@@ -70,9 +70,9 @@
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Πρόγραμμα", page_path("program")  %></li>
-              <li><%= link_to "Groups", "/path3"  %></li>
-              <li><%= link_to "Δημοσκόπηση", "/path3"  %></li>
-              <li><%= link_to "Επικοινωνία", "/path2"  %></li>
+              <li><%= link_to "Groups", "/"  %></li>
+              <li><%= link_to "Δημοσκόπηση", "/"  %></li>
+              <li><%= link_to "Επικοινωνία", "/"  %></li>
 
 			<ul class="pull-right">
 				<%if current_user%>
@@ -190,7 +190,15 @@
 	<script language="javascript" type="text/javascript" src="http://panel2.directhostingcenter.com/system/recenttracks.js"></script>
 	<script language="javascript" type="text/javascript" src="http://panel2.directhostingcenter.com/js.php/ehkgpoqg/recenttracks/rnd0"></script>
 </div>
-<%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-44691025-1', 'trohkaradio.com');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>

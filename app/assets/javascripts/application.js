@@ -30,6 +30,6 @@ chatDiv.scrollTop = chatDiv.scrollHeight;
     },5000);
 
 setInterval(function(){
-var recenttracksjs = recenttracksjs;
-
+var recenttracksjs = document.getElementsByClassName('recenttracksjs')[0];
+	recenttracksjs.load
     },5000);
