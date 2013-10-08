@@ -1,4 +1,4 @@
-<%if current_user.email == 'eliastsirwnhs@gmail.com'%>
+<%if current_user && current_user.admin%>
 
 <%= simple_form_for(@article, :html => { :multipart => true }) do |f| %>
   <% if @article.errors.any? %>

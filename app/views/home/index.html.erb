@@ -29,7 +29,7 @@
 
 <% end %>
 
-<%if current_user && current_user.email == "eliastsirwnhs@gmail.com" or "konstantin.xaxo@facebook.com"%>
+<%if current_user && current_user.admin = 'true'%>
 <button class="btn btn-large btn-primary" type="button"><%= link_to 'New Article', new_article_path %></button>
 <% end %>
 </br>
