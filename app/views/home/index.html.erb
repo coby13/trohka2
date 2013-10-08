@@ -4,7 +4,7 @@
   <div class="title">
 	
 	<%= image_tag("logo.png", :alt => "trohka logo",:width => 30, :height => 40) %>
-    <%= link_to article.title, article %>
+    <%= link_to raw(article.title), article %>
 
 
 </div>
@@ -29,7 +29,7 @@
 
 <% end %>
 
-<%if current_user && current_user.admin = 'true'%>
+<%if current_user && current_user.admin%>
 <button class="btn btn-large btn-primary" type="button"><%= link_to 'New Article', new_article_path %></button>
 <% end %>
 </br>
