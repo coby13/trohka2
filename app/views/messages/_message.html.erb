@@ -3,7 +3,7 @@
     	<%= message.created_at.strftime("%H:%M") %>:
     </a>
   <%= message.user.name if message.user %>
-  <%= message.content %>
+  <%= message.content.force_encoding("UTF-8") %>
 </li>
 
 

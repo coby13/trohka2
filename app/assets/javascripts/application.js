@@ -27,9 +27,9 @@ setInterval(function(){
 
 var chatDiv = document.getElementsByClassName('chat')[0]; //I assume you only have one chat box!
 chatDiv.scrollTop = chatDiv.scrollHeight;
-    },5000);
+    },20000);
 
 setInterval(function(){
-var recenttracksjs = document.getElementsByClassName('recenttracksjs')[0];
-	recenttracksjs.load
+var recenttracks = document.getElementsByClassName('recenttracks')[0];
+	recenttracks.load
     },5000);
