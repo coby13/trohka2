@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.order(:title)
+    @category = Category.find(1)
+    @articles = @category.Articles
     @messages = Message.all
     respond_to do |format|
       format.html # index.html.erb
